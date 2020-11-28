@@ -1,1 +1,1 @@
-# showcase-app
+# shiny-apps
