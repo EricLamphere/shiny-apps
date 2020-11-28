@@ -2,7 +2,6 @@
 ### Author:   Eric Lamphere (ericjlamphere@gmail.com)
 ### Time:     2020-11-28 16:33:09
 
-library(shiny)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(

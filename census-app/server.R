@@ -2,7 +2,6 @@
 ### Author:   Eric Lamphere (ericjlamphere@gmail.com)
 ### Time:     2020-11-28 16:33:09
 
-library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
