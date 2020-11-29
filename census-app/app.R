@@ -4,5 +4,15 @@
 
 devtools::install_github("EricLamphere/lamps")
 library(shiny); library(lamps)
+library(censusapi)
+
+
+# QUERY ####################################################################################################
+# https://api.census.gov/data.html
+# getCensus(
+#
+# )
+
+
 
 shiny::runApp('census-app')
