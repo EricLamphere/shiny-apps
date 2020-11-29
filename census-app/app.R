@@ -8,7 +8,8 @@ library(censusapi)
 
 
 # QUERY ####################################################################################################
-# https://api.census.gov/data.html
+### Census Data: https://api.census.gov/data.html
+### Getting Started with Census API: https://cran.r-project.org/web/packages/censusapi/vignettes/getting-started.html
 # getCensus(
 #
 # )
