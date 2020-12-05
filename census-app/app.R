@@ -18,16 +18,20 @@ acs1.meta <- listCensusMetadata(
 sex_age_vars <- acs1.meta %>%
   filter(group == "B01001") %>%
   select(name, label) %>%
-  mutate(label = gsub("Estimate!!Total:!!", "", label))
+  mutate(newLabel = gsub("Estimate!!Total:!!", "", label) %remove% ":",
+         newLabel = gsub("!!", " ", newLabel))
 
 
 census.data <- getCensus(
   name = "acs/acs1",
   vintage = 2019,
-  vars =
+  vars = sex_age_vars$name
 )
 
-
+census.data.l <- census.data %>%
+  pivot_longer(all_of(sex_age_vars$name)) %>%
+  left_join(sex_age_vars,
+            by = c("name"))
 
 
 shiny::runApp('census-app')
